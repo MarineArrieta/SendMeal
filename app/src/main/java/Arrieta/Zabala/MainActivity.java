@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean validarCorreo(){
         EditText correo = findViewById(R.id.correo);
         int longitud = correo.length();
-        int indice = correo.getText().toString().indexOf("@");
+        int indice;
         if(!correo.getText().toString().contains("@"))
             return false;
         else {
