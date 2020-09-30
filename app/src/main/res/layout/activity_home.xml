@@ -16,4 +16,5 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/miEstiloToolbar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
 </LinearLayout>
