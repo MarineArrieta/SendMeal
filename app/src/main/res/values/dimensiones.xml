@@ -3,4 +3,5 @@
 <resources>
     <dimen name="tarjetaText">15dp</dimen>
     <dimen name="espacioText">20dp</dimen>
+    <dimen name="bienvenida">40dp</dimen>
 </resources>

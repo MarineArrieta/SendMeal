@@ -3,5 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorTextoToolBar">#FBE9E7</color>
+    <color name="colorTextoToolBar">#FFCDD2</color>
+    <color name="colorFondoToolbar">#A795F6</color>
+    <color name="colorBienvenida">#1B31AC</color>
+
 </resources>
