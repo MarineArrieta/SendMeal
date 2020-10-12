@@ -14,6 +14,7 @@
         <item
             android:title="Listar Platos"
             android:id="@+id/menu_recetas"
+            android:icon="@drawable/listaplatos"
             />
     </group>
 </menu>

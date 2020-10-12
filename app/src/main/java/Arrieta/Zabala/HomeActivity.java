@@ -54,6 +54,11 @@ public class HomeActivity extends AppCompatActivity {
                         intent = new Intent(HomeActivity.this,MainActivity.class);
                         startActivity(intent);
                         break;
+                    case (R.id.menuPlato):
+                        intent = new Intent(HomeActivity.this,PlatoActivity.class);
+                        startActivity(intent);
+                        break;
+
                 }
                 return false;
             }

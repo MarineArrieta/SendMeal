@@ -4,4 +4,6 @@
     <dimen name="tarjetaText">15dp</dimen>
     <dimen name="espacioText">20dp</dimen>
     <dimen name="bienvenida">40dp</dimen>
+    <dimen name="titulo">30dp</dimen>
+    <dimen name="margenTop">10dp</dimen>
 </resources>
