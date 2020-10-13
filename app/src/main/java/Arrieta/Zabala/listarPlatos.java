@@ -11,4 +11,5 @@ public class listarPlatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_platos);
     }
+
 }
