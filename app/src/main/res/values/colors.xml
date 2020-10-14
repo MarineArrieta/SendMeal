@@ -6,5 +6,6 @@
     <color name="colorTextoToolBar">#FFCDD2</color>
     <color name="colorFondoToolbar">#A795F6</color>
     <color name="colorBienvenida">#1B31AC</color>
+    <color name="colorFondoCard">#000000</color>
 
 </resources>
