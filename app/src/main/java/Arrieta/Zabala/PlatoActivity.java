@@ -3,26 +3,32 @@ package Arrieta.Zabala;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import model.Plato;
 
+
 public class PlatoActivity extends AppCompatActivity {
     private EditText titulo,descripcion,precio,caloria;
     private Button guardar;
     private Toast toast;
-    private Plato plato;
+    private Plato plato = new Plato() ;
     private Toolbar miToolbar;
-    public static List<Plato> listaPlatos = new ArrayList<>();
-
+    List<Plato> listaPlato= null;
+    Intent intent;
 
 
     @Override
@@ -35,20 +41,39 @@ public class PlatoActivity extends AppCompatActivity {
         precio = (EditText) findViewById(R.id.precio);
         caloria = (EditText) findViewById(R.id.caloria);
         guardar = (Button) findViewById(R.id.btGuardar);
+//        Bundle platoRecibido = getIntent().getExtras();
+//        Log.d(PlatoActivity.NOTIFICATION_SERVICE, "onCreate: Activity plato");
+//        if(platoRecibido != null) {
+//            listaPlato = (List<Plato>) platoRecibido.getSerializable("listaPlato");
+//            Log.d(PlatoActivity.NOTIFICATION_SERVICE, "onCreate: Activity plato asigno");
+//            Log.d(PlatoActivity.NOTIFICATION_SERVICE, "onCreate: Activity plato asigno2"+listaPlato.getClass());
+//
+//        }
+
 
         guardar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+
                 if(validarDatos()){
-                    toast = Toast.makeText(getApplicationContext(), "Nuevo plato guardado", Toast.LENGTH_SHORT);
-                    toast.show();
+
                     double p = Double.parseDouble(precio.getText().toString());
                     int c = Integer.parseInt(caloria.getText().toString());
+                    Log.d(PlatoActivity.NOTIFICATION_SERVICE, "titulo1: "+titulo.getText().toString());
                     plato.setTitulo(titulo.getText().toString());
                     plato.setDescripcion(descripcion.getText().toString());
                     plato.setPrecio(p);
                     plato.setCaloria(c);
-                    listaPlatos.add(plato);
+                    plato.getListaPlatos().add(plato);
+                    Log.d(PlatoActivity.NOTIFICATION_SERVICE, "titulo2: "+plato.getTitulo().toString());
+                    Log.d(PlatoActivity.NOTIFICATION_SERVICE, "descripcion: "+plato.getDescripcion().toString());
+                    Log.d(PlatoActivity.NOTIFICATION_SERVICE, "Cantidad: "+plato.getListaPlatos().size());
+
+                    Bundle bundle = new Bundle();
+                    intent = new Intent(PlatoActivity.this,HomeActivity.class);
+                    bundle.putSerializable("plato", plato);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }
             }
         });

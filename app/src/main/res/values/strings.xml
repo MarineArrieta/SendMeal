@@ -12,9 +12,15 @@
     <string name="nuevoPlato">Nuevo Plato</string>
     <string name="nombrePlato" />
     <string name="descripcion">Descripcion</string>
+    <string name="descripcion2">Descripcion:</string>
     <string name="titulo">Titulo</string>
     <string name="precio">Precio</string>
+    <string name="precio2">Precio:</string>
+
     <string name="guardar">Guardar</string>
     <string name="caloria">Calorias</string>
+    <string name="caloria2">Calorias:</string>
     <string name="agregarPlato">Agregar Plato</string>
+    <string name="listarPlatos">Comidas</string>
+    <string name="registro">Registrarse</string>
 </resources>

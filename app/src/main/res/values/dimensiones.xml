@@ -6,4 +6,6 @@
     <dimen name="bienvenida">40dp</dimen>
     <dimen name="titulo">30dp</dimen>
     <dimen name="margenTop">10dp</dimen>
+    <dimen name="altoImagen">200dp</dimen>
+
 </resources>

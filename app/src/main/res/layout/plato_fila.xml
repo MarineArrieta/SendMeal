@@ -1,60 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewPlato"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardUseCompatPadding="true"
-        app:cardBackgroundColor="@color/colorFondoCard"
         app:cardCornerRadius="15dp"
-        app:cardElevation="5dp">
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginBottom="@dimen/margenTop"
+        android:layout_marginTop="@dimen/margenTop">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/colorFondoCard">
 
-            <TextView
-                android:id="@+id/tituloCard"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imagenCard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/blur" />
+                <ImageView
+                    android:id="@+id/imagenCard"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/altoImagen"
+                    android:layout_marginTop="@dimen/margenTop"
+                    android:layout_marginBottom="@dimen/margenTop"
+                    android:contentDescription="@string/descripcion"
+                    app:srcCompat="@drawable/fondocardviewcomida" />
+
+                <TextView
+                    android:id="@+id/tituloCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margenTop"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/titulo"
+                    android:textColor="@color/colorTextoCard"
+                    android:layout_centerInParent="true"
+
+                    />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/margenTop"
+                android:layout_marginRight="@dimen/margenTop">
+
+                <TextView
+                    android:id="@+id/descripcionTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descripcion2"
+                    android:textColor="@color/colorTextoCard"
+
+                    />
 
                 <TextView
                     android:id="@+id/descripcionCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:textColor="@color/colorTextoCard"
+                    />
 
-                <TextView
-                    android:id="@+id/precioCard"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margenTop">
 
-                <TextView
-                    android:id="@+id/caloriaCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    <TextView
+                        android:id="@+id/precioTag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.25"
+                        android:text="@string/precio2"
+                        android:textColor="@color/colorTextoCard"/>
+
+                    <TextView
+                        android:id="@+id/precioCard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.25"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTextoCard"/>
+
+                    <TextView
+                        android:id="@+id/caloriaTag"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.25"
+                        android:text="@string/caloria2"
+                        android:textColor="@color/colorTextoCard"/>
+
+                    <TextView
+                        android:id="@+id/caloriaCard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.25"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTextoCard"/>
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

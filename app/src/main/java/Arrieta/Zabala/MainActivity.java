@@ -1,6 +1,8 @@
 package Arrieta.Zabala;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     EditText pass1;
     EditText pass2;
     Toast toast;
+    Toolbar miToolbar;
 
 
 
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         registrar= findViewById(R.id.registrar);
         pass1 = findViewById(R.id.pass1);
         pass2 = findViewById(R.id.pass2);
+        setToolBar();
 
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                             @Override
@@ -225,5 +229,11 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
+    private void setToolBar() {
+        miToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(miToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle(R.string.registro);
+    }
 }
